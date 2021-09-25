@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f326d7f-d0b9-4074-ab23-50d4aac31b04" name="Changes" comment="Modifying BaseTest class and adding the first test class (YourLogoHomeTest)">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="4f326d7f-d0b9-4074-ab23-50d4aac31b04" name="Changes" comment="Adding every component needed for addingItemToShoppingCartTest executes. I modified BasePage, BaseTest, YourLogoHomePage and YourLogoHomeTest classes.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/ShoppingCartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testcases/ShoppingCartTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/YourLogoHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/YourLogoHomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testcases/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcases/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testcases/YourLogoHomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcases/YourLogoHomeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,35 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="TestNG.YourLogoHomeTest.addingItemToShoppingCartTest">
+  <component name="RunManager" selected="TestNG.C:/Users/the_s/IdeaProjects/TechnicalTestApplaudoStudios_SeleniumTestNG/testng.xml">
+    <configuration name="C:/Users/the_s/IdeaProjects/TechnicalTestApplaudoStudios_SeleniumTestNG/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TechnicalTestApplaudoStudios_SeleniumTestNG" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShoppingCartTest.removeItemShoppingCart" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TechnicalTestApplaudoStudios_SeleniumTestNG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.ShoppingCartTest" />
+      <option name="METHOD_NAME" value="removeItemShoppingCart" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="YourLogoHomeTest.addingItemToShoppingCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TechnicalTestApplaudoStudios_SeleniumTestNG" />
       <extension name="coverage">
@@ -80,6 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/the_s/IdeaProjects/TechnicalTestApplaudoStudios_SeleniumTestNG/testng.xml" />
+        <item itemvalue="TestNG.ShoppingCartTest.removeItemShoppingCart" />
         <item itemvalue="TestNG.YourLogoHomeTest.addingItemToShoppingCartTest" />
         <item itemvalue="TestNG.YourLogoHomeTest.testRunning" />
       </list>
@@ -129,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632447940024</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Adding every component needed for addingItemToShoppingCartTest executes. I modified BasePage, BaseTest, YourLogoHomePage and YourLogoHomeTest classes.">
+      <created>1632541494986</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1632541494986</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,6 +190,7 @@
     <MESSAGE value="Adding TestBase class and testng.xml file" />
     <MESSAGE value="Adding BasePage, YourLogoHomePage classes and some web elements and actions." />
     <MESSAGE value="Modifying BaseTest class and adding the first test class (YourLogoHomeTest)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifying BaseTest class and adding the first test class (YourLogoHomeTest)" />
+    <MESSAGE value="Adding every component needed for addingItemToShoppingCartTest executes. I modified BasePage, BaseTest, YourLogoHomePage and YourLogoHomeTest classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding every component needed for addingItemToShoppingCartTest executes. I modified BasePage, BaseTest, YourLogoHomePage and YourLogoHomeTest classes." />
   </component>
 </project>

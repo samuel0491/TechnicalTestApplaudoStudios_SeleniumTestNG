@@ -20,20 +20,27 @@ public class YourLogoHomePage extends BasePage {
     private By titleItemAddToCart = By.xpath(".//*[(@class='product-name' and @itemprop='url')]");
     private By layerProductAddedSuccessfully  = By.cssSelector("#layer_cart > div.clearfix > div.layer_cart_product.col-xs-12.col-md-6");
     private By productAddedCartName = By.id("layer_cart_product_title");
+    private By closeButtonLayerProductAdded = By.xpath(".//*[(@class='cross' and @title='Close window')]");
+    private By shoppingCartOption = By.xpath("//*[@id=\'header\']/div[3]/div/div/div[3]/div/a");
+    private By shoppingCartCounter = By.cssSelector("#header > div:nth-child(3) > div > div > div:nth-child(3) > div > a > span.ajax_cart_quantity");
 
     public void setCriteriaToSearch(String criteria){
+
         type(criteria,searchBarField);
     }
 
     public void pressEnterKeyBarField(){
-        pressEnter(Keys.ENTER,searchBarField);
+
+        pressAnyKey(Keys.ENTER,searchBarField);
     }
 
     public void waitUntilCounterItemAppear(){
+
         waitVisibilityOf(counterItemsFound);
     }
 
     public int getCountItemsFound(){
+
         return findElements(itemsListFound).size();
     }
 
@@ -49,17 +56,14 @@ public class YourLogoHomePage extends BasePage {
     }
 
     public void clicOnAddToCartButton(){
-
         clicOnSpecificAddToCartOption(itemsListFound,addToCartButton,1);
     }
 
     public String getProductNameToAddCart(){
-
         return getTextSpecificAddToCartItem(itemsListFound,titleItemAddToCart,1);
     }
 
     public String getProductNameAddedCart(){
-
         return getText(productAddedCartName);
     }
 
@@ -67,11 +71,24 @@ public class YourLogoHomePage extends BasePage {
         scrollDownUntilElementFound(itemsListFound);
     }
 
-    public void waitLayerProductAddedSuccessfullyAppear(){waitVisibilityOf(layerProductAddedSuccessfully);}
+    public void waitLayerProductAddedSuccessfullyAppear(){
+        waitVisibilityOf(layerProductAddedSuccessfully);
+    }
 
     public boolean isDisplayedLayerProductAddedSuccessfully(){
         return find(layerProductAddedSuccessfully).isDisplayed();
     }
 
+    public void closeLayerProductAddedSuccessfully(){
 
+        click(closeButtonLayerProductAdded);
+    }
+
+    public void waitLayerProductAddedSuccessfullyDisappear(){
+        waitInvisibilityOf(layerProductAddedSuccessfully);
+    }
+
+    public void clicShoppingCartOption(){
+        click(shoppingCartOption);
+    }
 }

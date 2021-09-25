@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="MyStore First Suite">
-
-<!--    <test name="Searching an Item that exists">
+<suite name="Your Logo Page Test Suite" thread-count = "2">
+    <test name="Adding item to shopping cart">
         <classes>
-            <class name="tests.PositiveSearchHomePageTest" />
+            <class name="testcases.YourLogoHomeTest" />
         </classes>
-    </test>-->
+    </test>
+    <test name="Removing item inside shopping cart">
+        <classes>
+            <class name="testcases.ShoppingCartTest" />
+        </classes>
+    </test>
 </suite> <!-- Suite -->

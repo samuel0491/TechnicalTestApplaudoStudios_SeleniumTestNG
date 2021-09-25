@@ -42,18 +42,22 @@ public class BasePage {
     }
 
     protected void type(String text,By locator){
-         find(locator).sendKeys(text);
+
+        find(locator).sendKeys(text);
     }
 
     protected void click(By locator){
+
         find(locator).click();
     }
 
-    protected void pressEnter(Keys key,By locator){
+    protected void pressAnyKey(Keys key,By locator){
+
         find(locator).sendKeys(key);
     }
 
     protected String getText(By locator){
+
         return find(locator).getText();
     }
 
@@ -62,8 +66,21 @@ public class BasePage {
         wait.until(ExpectedConditions.visibilityOf(find(locator)));
     }
 
+    protected void waitTextPresentInElement(By locator,String text){
+        wait.until(ExpectedConditions.textToBe(locator,text));
+    }
+
+    protected void waitInvisibilityOf(By locator) {
+
+        wait.until(ExpectedConditions.invisibilityOf(find(locator)));
+    }
+
     protected void scrollDownUntilElementFound(By locator){
 
         js.executeAsyncScript("window.scrollBy(0,500)");
+    }
+
+    protected boolean isElementDisplayed(By locator){
+        return find(locator).isDisplayed();
     }
 }
