@@ -30,14 +30,17 @@ public class ShoppingCartPage extends BasePage{
     }
 
     public String getProductNameToDelete(){
+
         return getText(productNameDetailsList);
     }
 
     public void waitTextPresentInElement(){
+
         waitTextPresentInElement(emptyCartAlert,"Your shopping cart is empty.");
     }
 
     public boolean isEmptyCardAlertDisplayed(){
+
         return isElementDisplayed(emptyCartAlert);
     }
 }

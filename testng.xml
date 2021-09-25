@@ -1,15 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Your Logo Page Test Suite" thread-count = "2">
+<suite name="Your Logo Page Test Suite">
     <test name="Adding item to shopping cart">
         <classes>
-            <class name="testcases.YourLogoHomeTest" />
+            <class name="testcases.YourLogoHomeTest" >
+                <methods>
+                    <include name="addingItemToShoppingCartTest"/>
+                </methods>
+            </class>
         </classes>
     </test>
+
     <test name="Removing item inside shopping cart">
         <classes>
-            <class name="testcases.ShoppingCartTest" />
+            <class name="testcases.ShoppingCartTest" >
+                <methods>
+                    <include name="removeItemShoppingCart"/>
+                </methods>
+            </class>
         </classes>
     </test>
+
+    <test name="Searching for an item existing">
+        <classes>
+            <class name="testcases.YourLogoHomeTest" >
+                <methods>
+                    <include name="searchingForProductExisting"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Searching for an item that doesn't existing">
+        <classes>
+            <class name="testcases.YourLogoHomeTest" >
+                <methods>
+                    <include name="searchingForProductDoesntExisting"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
 </suite> <!-- Suite -->
