@@ -4,6 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
+import java.util.Random;
 
 public class BasePage {
 
@@ -18,7 +19,16 @@ public class BasePage {
     }
 
     protected WebElement find(By locator){
+
         return driver.findElement(locator);
+    }
+
+    //to generate one random number between 0 and list.size() - 1
+    protected int generateRandomInteger(int upperBound){
+
+            Random random = new Random();
+
+        return random.nextInt(upperBound);
     }
 
     protected List<WebElement> findElements(By locator){

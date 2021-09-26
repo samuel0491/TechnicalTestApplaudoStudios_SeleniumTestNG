@@ -2,19 +2,21 @@ package testcases;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.YourLogoHomePage;
 
 public class YourLogoHomeTest extends BaseTest{
 
+    @Parameters({"productToSearch"})
     @Test
-    public void addingItemToShoppingCartTest(){
+    public void addingItemToShoppingCartTest(String productToSearch){
 
         YourLogoHomePage yourLogoHomePage =
                 PageFactory.initElements(driver,
                         YourLogoHomePage.class);
 
-        yourLogoHomePage.setCriteriaToSearch("dress");//TODO this value could be retrieve from a file or Data Base
+        yourLogoHomePage.setCriteriaToSearch(productToSearch);//
         yourLogoHomePage.pressEnterKeyBarField();
         yourLogoHomePage.waitUntilCounterItemAppear();
         yourLogoHomePage.selectViewType(2);//TODO this value could be retrieve from a properties file
@@ -30,14 +32,15 @@ public class YourLogoHomeTest extends BaseTest{
         //TODO: return to home page
     }
 
+    @Parameters({"productToSearch"})
     @Test
-    public void searchingForProductExisting(){
+    public void searchingForProductExisting(String productToSearch){
 
         YourLogoHomePage yourLogoHomePage =
                 PageFactory.initElements(driver,
                         YourLogoHomePage.class);
 
-        yourLogoHomePage.setCriteriaToSearch("short");//TODO this value could be retrieve from a file or Data Base
+        yourLogoHomePage.setCriteriaToSearch(productToSearch);//
         yourLogoHomePage.pressEnterKeyBarField();
         yourLogoHomePage.waitUntilCounterItemAppear();
 
@@ -45,14 +48,15 @@ public class YourLogoHomeTest extends BaseTest{
                             "Product(s) wasn't/weren't found!");
     }
 
+    @Parameters({"productToSearch"})
     @Test
-    public void searchingForProductDoesntExisting(){
+    public void searchingForProductDoesntExisting(String productToSearch){
 
         YourLogoHomePage yourLogoHomePage =
                 PageFactory.initElements(driver,
                         YourLogoHomePage.class);
 
-        yourLogoHomePage.setCriteriaToSearch("camisa");//TODO this value could be retrieve from a file or Data Base
+        yourLogoHomePage.setCriteriaToSearch(productToSearch);//
         yourLogoHomePage.pressEnterKeyBarField();
         yourLogoHomePage.waitTextPresentInElement();
 
@@ -60,21 +64,16 @@ public class YourLogoHomeTest extends BaseTest{
                 "Product(s) was/were found!");
     }
 
+    @Parameters({"storeAddress","storePhoneNumber","storeEmail"})
     @Test
-    public void validateStoreInformations() {
-
-        //values against test
-        String storeAddress = "Selenium Framework, Research Triangle Park, North Carolina, USA";
-        String storePhoneNumber = "(347) 466-7432";
-        String storeEmail = "support@seleniumframework.com";
-
+    public void validateStoreInformation(String storeAddress, String storePhoneNumber, String storeEmail) {
         YourLogoHomePage yourLogoHomePage =
                 PageFactory.initElements(driver,
                         YourLogoHomePage.class);
 
         yourLogoHomePage.scrollDownUntilStoreInformationBlock();
 
-        Assert.assertTrue(yourLogoHomePage.AreValidStoreInformations(storeAddress,
+        Assert.assertTrue(yourLogoHomePage.AreValidStoreInformation(storeAddress,
                                                                     storePhoneNumber,
                                                                     storeEmail),
                         "The store information are different as expected");

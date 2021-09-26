@@ -2,14 +2,16 @@ package testcases;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.ShoppingCartPage;
 import pages.YourLogoHomePage;
 
 public class ShoppingCartTest extends BaseTest{
 
+    @Parameters({"productToSearch"})
     @Test
-    public void removeItemShoppingCart()  {
+    public void removeItemShoppingCart(String productToSearch)  {
 
         String productToDelete = "";
         String productAddedCart = "";
@@ -17,7 +19,7 @@ public class ShoppingCartTest extends BaseTest{
                 PageFactory.initElements(driver,
                         YourLogoHomePage.class);
         //first, we add an item into the cart
-        yourLogoHomePage.setCriteriaToSearch("dress");//TODO this value could be retrieve from a file or Data Base
+        yourLogoHomePage.setCriteriaToSearch(productToSearch);
         yourLogoHomePage.pressEnterKeyBarField();
         yourLogoHomePage.waitUntilCounterItemAppear();
         yourLogoHomePage.selectViewType(2);//TODO this value could be retrieve from a properties file

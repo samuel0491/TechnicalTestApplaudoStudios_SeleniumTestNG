@@ -10,6 +10,8 @@ public class YourLogoHomePage extends BasePage {
         super(driver);
     }
 
+    private int randomItem;
+
     //webElements home page and home page with search results
     private By searchBarField = By.id("search_query_top");
     private By counterItemsFound = By.className("heading-counter");
@@ -49,6 +51,11 @@ public class YourLogoHomePage extends BasePage {
         return findElements(itemsListFound).size();
     }
 
+    public void setRandomItem(){
+
+        randomItem = generateRandomInteger(getCountItemsFound());
+    }
+
     public void selectViewType(int viewType){
         switch (viewType){
             case 1:
@@ -58,18 +65,20 @@ public class YourLogoHomePage extends BasePage {
                 click(viewListTypeResult);
                 break;
         }
+
+        this.setRandomItem();
     }
 
     public void clicOnAddToCartButton(){
-
         clicOnSpecificAddToCartOption(itemsListFound,
                                         addToCartButton,
-                                        1);
+                                        randomItem);
     }
 
     public String getProductNameToAddCart(){
-        return getTextSpecificAddToCartItem(itemsListFound,titleItemAddToCart,
-                1);
+        return getTextSpecificAddToCartItem(itemsListFound,
+                                            titleItemAddToCart,
+                                            randomItem);
     }
 
     public String getProductNameAddedCart(){
@@ -124,7 +133,7 @@ public class YourLogoHomePage extends BasePage {
         scrollDownUntilElementFound(storeInformationsBlock);
     }
 
-    public boolean AreValidStoreInformations(String address,String phoneNumber,String email) {
+    public boolean AreValidStoreInformation(String address,String phoneNumber,String email) {
 
         if (getText(storeInformationAddress).contentEquals(address)
                 && getText(storeInformationPhoneNumber).contentEquals(phoneNumber)
@@ -134,9 +143,5 @@ public class YourLogoHomePage extends BasePage {
         else{
             return false;
         }
-
     }
-
-
-
 }

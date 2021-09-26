@@ -2,7 +2,9 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Your Logo Page Test Suite">
+
     <test name="Adding item to shopping cart">
+        <parameter name="productToSearch" value="dress"/>
         <classes>
             <class name="testcases.YourLogoHomeTest" >
                 <methods>
@@ -13,6 +15,7 @@
     </test>
 
     <test name="Removing item inside shopping cart">
+        <parameter name="productToSearch" value="dress"/>
         <classes>
             <class name="testcases.ShoppingCartTest" >
                 <methods>
@@ -23,6 +26,7 @@
     </test>
 
     <test name="Searching for an item existing">
+        <parameter name="productToSearch" value="short"/>
         <classes>
             <class name="testcases.YourLogoHomeTest" >
                 <methods>
@@ -33,6 +37,7 @@
     </test>
 
     <test name="Searching for an item that doesn't existing">
+        <parameter name="productToSearch" value="camisa"/>
         <classes>
             <class name="testcases.YourLogoHomeTest" >
                 <methods>
@@ -42,13 +47,17 @@
         </classes>
     </test>
 
-    <test name="Validate Store Informations">
+    <test name="Validate Store Information">
+        <parameter name="storeAddress" value="Selenium Framework, Research Triangle Park, North Carolina, USA"/>
+        <parameter name="storePhoneNumber" value="(347) 466-7432"/>
+        <parameter name="storeEmail" value="support@seleniumframework.com"/>
         <classes>
             <class name="testcases.YourLogoHomeTest" >
                 <methods>
-                    <include name="validateStoreInformations"/>
+                    <include name="validateStoreInformation"/>
                 </methods>
             </class>
         </classes>
     </test>
+
 </suite> <!-- Suite -->
