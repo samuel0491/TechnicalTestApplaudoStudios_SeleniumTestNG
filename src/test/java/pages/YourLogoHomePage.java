@@ -24,6 +24,10 @@ public class YourLogoHomePage extends BasePage {
     private By shoppingCartOption = By.xpath("//*[@id=\'header\']/div[3]/div/div/div[3]/div/a");
     private By shoppingCartCounter = By.cssSelector("#header > div:nth-child(3) > div > div > div:nth-child(3) > div > a > span.ajax_cart_quantity");
     private By noResultsSearchingAlert = By.xpath("//*[@id=\'center_column\']/p");
+    private By storeInformationsBlock = By.id("block_contact_infos");
+    private By storeInformationAddress = By.xpath("//*[@id='block_contact_infos']/div/ul/li[1]");
+    private By storeInformationPhoneNumber = By.xpath("//*[@id=\'block_contact_infos\']/div/ul/li[2]/span");
+    private By storeInformationEmail = By.xpath("//*[@id=\'block_contact_infos\']/div/ul/li[3]/span/a");
 
     public void setCriteriaToSearch(String criteria){
 
@@ -58,11 +62,14 @@ public class YourLogoHomePage extends BasePage {
 
     public void clicOnAddToCartButton(){
 
-        clicOnSpecificAddToCartOption(itemsListFound,addToCartButton,1);
+        clicOnSpecificAddToCartOption(itemsListFound,
+                                        addToCartButton,
+                                        1);
     }
 
     public String getProductNameToAddCart(){
-        return getTextSpecificAddToCartItem(itemsListFound,titleItemAddToCart,1);
+        return getTextSpecificAddToCartItem(itemsListFound,titleItemAddToCart,
+                1);
     }
 
     public String getProductNameAddedCart(){
@@ -80,11 +87,6 @@ public class YourLogoHomePage extends BasePage {
         {
             return false;
         }
-    }
-
-    public void scrollDownUntilElement(){
-
-        scrollDownUntilElementFound(itemsListFound);
     }
 
     public void waitLayerProductAddedSuccessfullyAppear(){
@@ -113,6 +115,28 @@ public class YourLogoHomePage extends BasePage {
 
     public void waitTextPresentInElement(){
 
-        waitTextPresentInElement(noResultsSearchingAlert,"No results were found for your search \"camisa\"");
+        waitTextPresentInElement(noResultsSearchingAlert,
+                "No results were found for your search \"camisa\"");
     }
+
+    public void scrollDownUntilStoreInformationBlock(){
+
+        scrollDownUntilElementFound(storeInformationsBlock);
+    }
+
+    public boolean AreValidStoreInformations(String address,String phoneNumber,String email) {
+
+        if (getText(storeInformationAddress).contentEquals(address)
+                && getText(storeInformationPhoneNumber).contentEquals(phoneNumber)
+                && getText(storeInformationEmail).contentEquals(email)) {
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+
+
+
 }

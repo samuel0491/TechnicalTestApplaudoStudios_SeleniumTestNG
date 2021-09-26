@@ -77,10 +77,12 @@ public class BasePage {
 
     protected void scrollDownUntilElementFound(By locator){
 
-        js.executeAsyncScript("window.scrollBy(0,500)");
+        js.executeScript("arguments[0].scrollIntoView();"
+                ,find(locator));
     }
 
     protected boolean isElementDisplayed(By locator){
+
         return find(locator).isDisplayed();
     }
 }

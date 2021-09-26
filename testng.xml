@@ -42,4 +42,13 @@
         </classes>
     </test>
 
+    <test name="Validate Store Informations">
+        <classes>
+            <class name="testcases.YourLogoHomeTest" >
+                <methods>
+                    <include name="validateStoreInformations"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite> <!-- Suite -->

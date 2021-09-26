@@ -59,4 +59,25 @@ public class YourLogoHomeTest extends BaseTest{
         Assert.assertFalse(yourLogoHomePage.wereProductsFound(),
                 "Product(s) was/were found!");
     }
+
+    @Test
+    public void validateStoreInformations() {
+
+        //values against test
+        String storeAddress = "Selenium Framework, Research Triangle Park, North Carolina, USA";
+        String storePhoneNumber = "(347) 466-7432";
+        String storeEmail = "support@seleniumframework.com";
+
+        YourLogoHomePage yourLogoHomePage =
+                PageFactory.initElements(driver,
+                        YourLogoHomePage.class);
+
+        yourLogoHomePage.scrollDownUntilStoreInformationBlock();
+
+        Assert.assertTrue(yourLogoHomePage.AreValidStoreInformations(storeAddress,
+                                                                    storePhoneNumber,
+                                                                    storeEmail),
+                        "The store information are different as expected");
+    }
+
 }
