@@ -25,3 +25,10 @@ I added my test cases into testng.xml file and runned the suite. you should get 
 ![run suite](https://user-images.githubusercontent.com/13719381/134829567-3c052504-ff01-4f12-bba6-790578defbf1.JPG)
 
 **For this project, I used IntelliJ IDE, so when you clone this project and open it using IntelliJ, every dependencies should be downloaded automatically.**
+
+If you are using Eclipse IDE, you should import the project (if it didn't cloned from git) as Maven Project (Existing Maven Project option). Step by step below:
+
+![step 1](https://user-images.githubusercontent.com/13719381/134835448-a39d1e00-578b-41ea-9e2e-81bfa441b659.JPG)
+
+![step 2](https://user-images.githubusercontent.com/13719381/134835463-7ce8cea0-a864-471c-9af5-4afee959ac5f.JPG)
+
