@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f326d7f-d0b9-4074-ab23-50d4aac31b04" name="Changes" comment="General refactoring on some class and class test. Adding parameters at Test Methods">
+    <list default="true" id="4f326d7f-d0b9-4074-ab23-50d4aac31b04" name="Changes" comment="formatting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632669224248</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="formatting">
+      <created>1632700164934</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1632700164934</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,6 +242,7 @@
     <MESSAGE value="Adding every component needed for searchingForProductExisting and searchingForProductDoesntExisting  execute. I modified YourLogoHomePage, YourLogoHomeTest classes." />
     <MESSAGE value="Adding every component needed for validateStoreInformations executes. I modified YourLogoHomePage, YourLogoHomeTest classes." />
     <MESSAGE value="General refactoring on some class and class test. Adding parameters at Test Methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="General refactoring on some class and class test. Adding parameters at Test Methods" />
+    <MESSAGE value="formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="formatting" />
   </component>
 </project>
