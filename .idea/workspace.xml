@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f326d7f-d0b9-4074-ab23-50d4aac31b04" name="Changes" comment="formatting" />
+    <list default="true" id="4f326d7f-d0b9-4074-ab23-50d4aac31b04" name="Changes" comment="removing argeet folder nd it objects">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testcases/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcases/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -220,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632702285355</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="removing argeet folder nd it objects">
+      <created>1632709216209</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1632709216209</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,6 +259,7 @@
     <MESSAGE value="Adding every component needed for validateStoreInformations executes. I modified YourLogoHomePage, YourLogoHomeTest classes." />
     <MESSAGE value="General refactoring on some class and class test. Adding parameters at Test Methods" />
     <MESSAGE value="formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="formatting" />
+    <MESSAGE value="removing argeet folder nd it objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing argeet folder nd it objects" />
   </component>
 </project>
